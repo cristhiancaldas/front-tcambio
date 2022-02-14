@@ -1,0 +1,35 @@
+<div class="jumbotron mt-5">
+    <h2 class="heading">Filtros </h2>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+            <form (ngSubmit)=tipoCambio()>
+                <div class="form-group">
+                    <label for="exampleSelect1" class="form-label mt-4">Moneda Origen :</label>
+                    <select name="monedaOrigen" [(ngModel)]='mOrigenSeleccionada' class="form-control form-control-lg">
+                        <option [value]="mOrigen.value" *ngFor="let mOrigen of monedaOrigen">
+                            {{mOrigen.nombre}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelect1" class="form-label mt-4">Moneda Destino :</label>
+                    <select name="monedaDestino" [(ngModel)]='mDestinoSeleccionada'
+                        class="form-control form-control-lg">
+                        <option [value]="pais.value" *ngFor="let pais of monedaDestino">{{pais.nombre}}
+                        </option>
+                    </select>
+                </div>
+                <div class="form-group ">
+                    <fieldset>
+                        <label class="form-label">Monto :</label>
+                        <div class="col-s-10">
+                            <input name="monto" type="text" [(ngModel)]='montoCambio'
+                                class="form-control form-control-lg">
+                        </div>
+                    </fieldset>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block btn-lg">Buscar</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<app-navbar [titulo]="'Herramienta - Tipo de Cambio'"></app-navbar>
+<div class="container">
+  <app-formulario (parametrosSeleccionados)="tipoCambio($event)"></app-formulario>
+  <app-spinner *ngIf="loading"></app-spinner>
+  <app-resultado [listCambio]="listCambio"></app-resultado>
+</div>

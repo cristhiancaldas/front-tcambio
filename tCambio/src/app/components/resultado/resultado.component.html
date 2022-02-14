@@ -1,0 +1,7 @@
+<div *ngFor="let cambio of listCambio" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-header">Tipo de Cambio - {{ cambio.tipoCambio}}</div>
+    <div class="card-body">
+        <h4 class="card-title">{{ cambio.monedaOrigen }} A {{ cambio.monedaDestino }}</h4>
+        <p class="card-text">{{ cambio.montoTipoCambio}}</p>
+    </div>
+</div>
